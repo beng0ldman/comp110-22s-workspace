@@ -1,8 +1,9 @@
-"""Art project: A sky of hot air balloons.
-I have used random functions to create variety in the sky during each iteration of the scene.
-This is seen in the position, number, and color of the balloons, baskets, and clouds (although all clouds are white).
-I have embedded the cloud() function within the clouds() function, and the clouds() into the background().
-I have also combined basket() into balloon(), and balloon() into balloons()."""
+"""Art project: A sky of hot air balloons."""
+
+# I have used random functions to create variety in the sky during each iteration of the scene.
+# This is seen in the position, number, and color of the balloons, baskets, and clouds (although all clouds are white).
+# I have embedded the cloud() function within the clouds() function, and the clouds() into the background().
+# I have also combined basket() into balloon(), and balloon() into balloons().
 
 
 __author__ = "730359525"
@@ -12,7 +13,7 @@ from random import randint
 
 
 def cloud(pen: Turtle, x: float, y: float) -> None:
-    """Drawing a cloud for the background""" 
+    """Drawing a cloud for the background.""" 
     pen.up()
     pen.goto(x, y)
     pen.down()
@@ -69,7 +70,7 @@ def background(pen: Turtle) -> None:
 
 
 def balloon(pen: Turtle, x: float, y: float) -> None:
-    """Drawing a hot air balloon for the foreground"""
+    """Drawing a hot air balloon for the foreground."""
     pen.speed(0)
     pen.up()
     pen.goto(x, y)
@@ -96,7 +97,7 @@ def balloon(pen: Turtle, x: float, y: float) -> None:
 
 
 def basket(pen: Turtle, x: float, y: float) -> None:
-    """Drawing the basket for the hot air ballon"""
+    """Drawing the basket for the hot air ballon."""
     pen.up()
     pen.goto((x - 51), (y - 68))
     pen.down()
