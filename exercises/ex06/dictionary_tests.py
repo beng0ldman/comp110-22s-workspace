@@ -28,7 +28,7 @@ def test_error_message() -> None:
 def test_counting_nothing() -> None:
     """Returning no list, when empty list is provided."""
     test: list[str] = []
-    assert count(test) == []
+    assert count(test) == list[str]
 
 
 def test_counting_multiple_of_3() -> None:
@@ -58,4 +58,4 @@ def test_favorite_color_first() -> None:
 def test_fav_color_absent() -> None:
     """Given a dict with no content, nothing will be returned."""
     ex: dict[str, str] = {}
-    assert favorite_color(ex) == {}
+    assert favorite_color(ex) == dict[str, str]
