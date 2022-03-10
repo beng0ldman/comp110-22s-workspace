@@ -2,9 +2,8 @@
 
 __author__ = "730359525"
 
-from ex06.dictionary import invert, favorite_color, count
+from dictionary import invert, favorite_color, count
 import pytest
-invert({'a': 'z', 'b': 'y', 'c': 'x'})
 
 
 def test_empty_dict() -> None:
@@ -20,26 +19,27 @@ def test_two_items() -> None:
 
 
 def test_error_message() -> None:
+    """Testing for a KeyError response if duplicated values are turned into duplicate keys."""
     with pytest.raises(KeyError):
         my_dictionary: dict[str, str] = {'kris': 'jordan', 'michael': 'jordan'}
         invert(my_dictionary)
 
 
 def test_counting_nothing() -> None:
-    """Returning no list, when empty list is provided"""
-    test: list = []
+    """Returning no list, when empty list is provided."""
+    test: list[str] = []
     assert count(test) == []
 
 
 def test_counting_multiple_of_3() -> None:
     """Counting to 3 when there is a value repeated thrice."""
-    ex: list = ["value", "value", "value"]
+    ex: list[str] = ["value", "value", "value"]
     assert count(ex) == {'value': 3}
 
 
 def test_counting_rept_and_non_rept() -> None:
     """Counting both repeating and non-repeating key items."""
-    ex: list = ["value", "value", "value", "abnormal", "unusual"]
+    ex: list[str] = ["value", "value", "value", "abnormal", "unusual"]
     assert count(ex) == {'value': 3, 'abnormal': 1, 'unusual': 1}
 
 
